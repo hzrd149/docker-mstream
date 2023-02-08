@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  node:
+    build:
+      context: ./default
+    ports:
+      - 8080:80
+    volumes:
+      - ./music:/music
+    environment:
+      USER: admin
+      PASSWORD: password
